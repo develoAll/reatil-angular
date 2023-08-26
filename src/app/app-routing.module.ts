@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import(`./proyect-retail/proyect-retail.module`).then((m) => m.ProyectRetailModule),
   },
+  {
+    path: '**',
+    redirectTo: 'contenido',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
