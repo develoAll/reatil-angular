@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ObjectProduct } from './shared/interfaces/auth';
+import { ProductPerson } from './shared/interfaces/auth';
 import { ProductService } from './services/product.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class ProyectRetailComponent implements OnInit{
   public loading: boolean = false;
 
   public grupo: number = 10;
-  public listProduct: ObjectProduct[] = [];
-  public sortedData: ObjectProduct[] = [];
+  public listProduct: ProductPerson[] = [];
+  public sortedData: ProductPerson[] = [];
   public tamanio: number = 0;
   public page: number = 0;
   public filtro: string = '';
@@ -44,11 +44,27 @@ export class ProyectRetailComponent implements OnInit{
     this.page = 1;
     this.sortedData = this.listProduct.filter(
       (comprobante) =>
-        comprobante.regex
+        comprobante.random
           .toString()
           .toLowerCase()
           .includes(this.filtro.toLowerCase()) ||
-        comprobante.age
+        comprobante.randomFloat
+          .toString()
+          .toLowerCase()
+          .includes(this.filtro.toLowerCase()) ||
+        comprobante.bool
+          .toString()
+          .toLowerCase()
+          .includes(this.filtro.toLowerCase()) ||
+        comprobante.date
+          .toString()
+          .toLowerCase()
+          .includes(this.filtro.toLowerCase()) ||
+        comprobante.regEx
+          .toString()
+          .toLowerCase()
+          .includes(this.filtro.toLowerCase()) ||
+        comprobante.enumValue
           .toString()
           .toLowerCase()
           .includes(this.filtro.toLowerCase())

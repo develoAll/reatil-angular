@@ -98,16 +98,19 @@
               <h4>Bool</h4>
             </td>
             <td>
-              <h4>Regex</h4>
+              <h4>Date</h4>
             </td>
             <td>
-              <h4>Enun</h4>
+              <h4>RegEx</h4>
             </td>
             <td>
-              <h4>Elt</h4>
+              <h4>EnumValue</h4>
             </td>
             <td>
-              <h4>Age</h4>
+              <h4>Persona</h4>
+            </td>
+            <td>
+              <h4>Email</h4>
             </td>
           </tr>
           <tr
@@ -118,22 +121,16 @@
               let i = index
             "
           >
-            <td class="body-row-td">{{ listProduct.id }}</td>
-            <td class="body-row-td">{{ listProduct.date_create }}</td>
+            <td class="body-row-td">{{ listProduct.idProduct }}</td>
+            <td class="body-row-td">{{ listProduct.fechaCreacion }}</td>
             <td class="body-row-td">{{ listProduct.random }}</td>
-            <td class="body-row-td">{{ listProduct.random_float }}</td>
+            <td class="body-row-td">{{ listProduct.randomFloat }}</td>
             <td class="body-row-td">{{ listProduct.bool }}</td>
-            <td class="body-row-td">{{ listProduct.regex }}</td>
-            <td class="body-row-td">{{ listProduct.age }}</td>
-            <!-- <td class="body-row-td">
-              <button
-                mat-stroked-button
-                [disabled]="itemSiniestro.estado != 9"
-                color="primary"
-              >
-                Ver detalle
-              </button>
-            </td> -->
+            <td class="body-row-td">{{ listProduct.date }}</td>
+            <td class="body-row-td">{{ listProduct.regEx }}</td>
+            <td class="body-row-td">{{ listProduct.enumValue }}</td>
+            <td class="body-row-td">{{ listProduct.person.firstName }} {{ listProduct.person.firstName }} {{ listProduct.person.lastName }} {{ listProduct.person.firstName2 }}</td>
+            <td class="body-row-td">{{ listProduct.person.email }}</td>
           </tr>
         </table>
       </div>
